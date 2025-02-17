@@ -32,7 +32,7 @@ st.title("Amicia")
 # Header
 st.header("Hello. I am Amicia! ")
 
-instructions = st.text_are("What do you want me to generate for you?")
+instructions = st.text_area("What do you want me to generate for you?")
 
 if len(instructions) < 1000:
     if st.button("Generate"):
