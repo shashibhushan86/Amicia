@@ -33,12 +33,14 @@ st.title("Amicia")
 st.header("Hello. I am Amicia! ")
 
 instructions = st.text_area("What do you want me to generate for you?")
+st.info(instructions)
+
 
 if len(instructions) < 1000:
     if st.button("Generate"):
         # Generate output
         output = generator(instructions)
-        print(output[0]["generated_text"])
+        #print(output[0]["generated_text"])
         st.info(output)
 else:
     st.warning(
